@@ -8,14 +8,6 @@ import ShelvesPage from '../pages/shelvesPage';
 
 
 export default class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            searchTerm: ''
-        }
-    }
-
     render() {
         return (
             <Container>
@@ -32,7 +24,7 @@ export default class App extends Component {
                             </Col>
                         </Route>
                         <Route path="/shelves">
-                            <Col sm={{span: 6, offset: 3}}>
+                            <Col>
                                 <ShelvesPage/>
                             </Col>
                         </Route>

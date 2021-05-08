@@ -21,18 +21,38 @@ const SearchItemList = styled.ul`
 export default class SearchPage extends Component{
     constructor(props) {
         super(props);
+        
         this.state = {
-            data: []
+            data: [],
         }
         this.onHandleSearch = this.onHandleSearch.bind(this);
     }
 
+    putToStorage(key, data) {
+        const items = JSON.stringify(data);
+        sessionStorage.setItem(key, items);
+    }
+
+    retrieveFromStorage(key) {
+        const data = sessionStorage.getItem(key);
+        return JSON.parse(data);
+    }
+
     onHandleSearch(data) {
         this.setState({data});
+        this.putToStorage('data', data);
     }
 
     render () {
-        const {data} = this.state;
+        let {data} = this.state;
+
+        let storageItems;
+        if (sessionStorage.getItem('data')) {
+            storageItems = this.retrieveFromStorage('data')
+        }
+
+        data = data.length !== 0 ? data : storageItems || data;
+
         const searchItem = data.map((item) => {
             const {id, title, authors, description, url, published} = item;
             return (
@@ -45,6 +65,7 @@ export default class SearchPage extends Component{
                     publishedDate={published}/>
             );
         });
+
         return (
             <SearchWrapper>
                 <SearchForm onSubmit={this.onHandleSearch}/>

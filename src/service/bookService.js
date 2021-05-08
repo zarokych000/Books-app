@@ -4,6 +4,7 @@ import axios from 'axios';
 export default class BookService {
     constructor() {
         this._apiSearchBase = 'https://www.googleapis.com/books/v1/volumes';
+        this._apiBase = "http://localhost:3000"
         this.plugImage = "https://stat.rs24.ru/OA_MEDIA/endeca/images/no_image.jpg";
         this._transformBooks = this._transformBooks.bind(this);
     }

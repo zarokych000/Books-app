@@ -1,0 +1,42 @@
+{
+    "shelves": {
+        "best fantasy": [
+            {
+                "title": "Коготь Дракона",
+                "age": 22
+            },
+            {
+                "title": "Коготь",
+                "age": 1
+            },
+            {
+                "title": "Дракон",
+                "age": 1000
+            }
+        ],
+        "best classic": [
+            {
+                "title": "Евгений онегин",
+                "author": "Пушкин"
+            },
+            {
+                "title": "Война и мир",
+                "author": "Толстой"
+            }
+        ],
+        "top 100 books": [
+            {
+                "title": "Голодные игры",
+                "author": "N/A"
+            },            {
+                "title": "Узбекские страсти",
+                "author": "N/A"
+            }
+        ]
+    },
+    "menu": [
+        {
+            "title": "salad"
+        }
+    ]
+}
