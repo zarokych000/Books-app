@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 
-const ShelfElement = styled.div`
+const ShelfImgWrapper = styled.div`
     width: 100%;
-    max-width: 100px;
-
-    padding: 10px;
-    
-    background: #eee;
+    height: 230px;
 `;
 
-const ShelfImgWrapper = styled.div`
-    
+const ShelfElement = styled.li`
+    width: 100%;
+    max-width: 150px;
+    margin-right: ${props => props.margin || "0"};
+    margin-top: ${props => props.margin || "0"};
+    @media (max-width: 576px) {
+        margin-top: 20px;
+        margin-right: 20px;
+    }
 `;
 
 const ShelfImg = styled.img`
@@ -21,10 +24,20 @@ const ShelfImg = styled.img`
     object-fit: cover;
 `;
 
-const ShelfItem = () => {
+const ShelfTitle = styled.h5`
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+`;
+
+const ShelfItem = (props) => {
+    const {url, title, shelfPage} = props;
     return(
-        <ShelfElement>
-            
+        <ShelfElement margin={shelfPage ? "40px" : 0} className="shelf__elem">
+            <ShelfImgWrapper className="shelf__img-wrapper">
+                <ShelfImg className="shelf__img" src={url}/>
+            </ShelfImgWrapper>
+            <ShelfTitle className="shelf__title">{title}</ShelfTitle>
         </ShelfElement>
     )
 };

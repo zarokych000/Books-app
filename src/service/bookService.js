@@ -8,6 +8,37 @@ export default class BookService {
         this.plugImage = "https://stat.rs24.ru/OA_MEDIA/endeca/images/no_image.jpg";
         this._transformBooks = this._transformBooks.bind(this);
     }
+    // base methods
+    getResource = async (url) => {
+        const res = await axios.get(url);
+
+        if (!(res.status >= 200 && res.status <= 300)) {
+            throw new Error(`Could not fetch ${url} status: ${res.status}`);
+        }
+
+        return res.data;
+    }
+
+    // search method
+
+    searchBooks = async (term) => {
+        const modTerm = term.split(' ').join('%20');
+        const books = await this.getResource(`${this._apiSearchBase}?q=${modTerm}`)
+        return books.items.map(this._transformBooks);
+    }
+    // shelf manipulation
+
+    searchShelf = async () => {
+        const req = await this.getResource(`${this._apiBase}/shelves`);
+        return await req;
+    }
+
+    changeShelves = async (data) => {
+        const change = await axios.post(`${this._apiBase}/shelves`, data);
+        return await change;
+    }
+
+    // proccessing data from server
 
     _isSet(value) {
         if (value) {
@@ -27,22 +58,6 @@ export default class BookService {
 
     _proccesImage(img) {
         return img ? img.thumbnail : this.plugImage;
-    }
-    
-    getResource = async (url) => {
-        const res = await axios.get(`${this._apiSearchBase}${url}`);
-
-        if (!(res.status >= 200 && res.status <= 300)) {
-            throw new Error(`Could not fetch ${url} status: ${res.status}`);
-        }
-
-        return res.data;
-    }
-
-    searchBooks = async (term) => {
-        const modTerm = term.split(' ').join('%20');
-        const books = await this.getResource(`?q=${modTerm}`)
-        return books.items.map(this._transformBooks);
     }
 
     _transformBooks(rawItem) {

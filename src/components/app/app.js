@@ -5,7 +5,7 @@ import {Switch, Route} from 'react-router-dom';
 import Header from '../header';
 import SearchPage from '../pages/searchPage';
 import ShelvesPage from '../pages/shelvesPage';
-
+import ShelfPage from '../pages/shelfPage';
 
 export default class App extends Component {
     render() {
@@ -23,15 +23,17 @@ export default class App extends Component {
                                 <SearchPage/>
                             </Col>
                         </Route>
-                        <Route path="/shelves">
+                        <Route path="/shelves/" exact>
                             <Col>
                                 <ShelvesPage/>
                             </Col>
                         </Route>
-                        <Route path="/registr">
+                        <Route path="/registr/">
                             <Col sm={{span: 6, offset: 3}}>
                                 <h1>Регистрация</h1>
                             </Col>
+                        </Route>
+                        <Route path="/shelves/:id" component={ShelfPage}>
                         </Route>
                     </Switch>
                 </Row>

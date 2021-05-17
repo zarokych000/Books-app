@@ -1,42 +1,142 @@
 {
-    "shelves": {
-        "best fantasy": [
-            {
-                "title": "Коготь Дракона",
-                "age": 22
-            },
-            {
-                "title": "Коготь",
-                "age": 1
-            },
-            {
-                "title": "Дракон",
-                "age": 1000
-            }
-        ],
-        "best classic": [
-            {
-                "title": "Евгений онегин",
-                "author": "Пушкин"
-            },
-            {
-                "title": "Война и мир",
-                "author": "Толстой"
-            }
-        ],
-        "top 100 books": [
-            {
-                "title": "Голодные игры",
-                "author": "N/A"
-            },            {
-                "title": "Узбекские страсти",
-                "author": "N/A"
-            }
-        ]
-    },
-    "menu": [
+  "shelves": {
+    "Best dark fantasy": [
+      {
+        "title": "The Grace of Kings",
+        "author": "Ken Liu",
+        "url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1463990267l/30255854.jpg",
+        "id": 1
+      },
+      {
+        "title": "The Colour of Magic",
+        "author": "Terry Pratchett",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91aC4cYBeQL.jpg",
+        "id": 2
+      },
+      {
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J. K. Rowling",
+        "url": "https://i.pinimg.com/originals/d5/40/d9/d540d9ce13f7240f8d061b9ef41e5361.jpg",
+        "id": 3
+      },
+      {
+        "title": "A Dance with Dragons",
+        "author": "George R. R. Martin",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/81WInI5d-TL.jpg",
+        "id": 4
+      },
+      {
+        "title": "Good Omens",
+        "author": "Neil Gaiman and Terry Pratchett",
+        "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+        "id": 5
+      },
+      {
+        "title": "Good Omens",
+        "author": "Neil Gaiman and Terry Pratchett",
+        "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+        "id": 6
+      },
+      {
+        "title": "Good Omens",
+        "author": "Neil Gaiman and Terry Pratchett",
+        "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+        "id": 7
+      }
+    ],
+    "Best classic fantasy": [
         {
-            "title": "salad"
+          "title": "The Grace of Kings",
+          "author": "Ken Liu",
+          "url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1463990267l/30255854.jpg",
+          "id": 1
+        },
+        {
+          "title": "The Colour of Magic",
+          "author": "Terry Pratchett",
+          "url": "https://images-na.ssl-images-amazon.com/images/I/91aC4cYBeQL.jpg",
+          "id": 2
+        },
+        {
+          "title": "Harry Potter and the Philosopher's Stone",
+          "author": "J. K. Rowling",
+          "url": "https://i.pinimg.com/originals/d5/40/d9/d540d9ce13f7240f8d061b9ef41e5361.jpg",
+          "id": 3
+        },
+        {
+          "title": "A Dance with Dragons",
+          "author": "George R. R. Martin",
+          "url": "https://images-na.ssl-images-amazon.com/images/I/81WInI5d-TL.jpg",
+          "id": 4
+        },
+        {
+          "title": "Good Omens",
+          "author": "Neil Gaiman and Terry Pratchett",
+          "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+          "id": 5
+        },
+        {
+          "title": "Good Omens",
+          "author": "Neil Gaiman and Terry Pratchett",
+          "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+          "id": 6
+        },
+        {
+          "title": "Good Omens",
+          "author": "Neil Gaiman and Terry Pratchett",
+          "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+          "id": 7
         }
+      ],
+    "Best light fantasy": [
+      {
+        "title": "The Grace of Kings",
+        "author": "Ken Liu",
+        "url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1463990267l/30255854.jpg",
+        "id": 1
+      },
+      {
+        "title": "The Colour of Magic",
+        "author": "Terry Pratchett",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91aC4cYBeQL.jpg",
+        "id": 2
+      },
+      {
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J. K. Rowling",
+        "url": "https://i.pinimg.com/originals/d5/40/d9/d540d9ce13f7240f8d061b9ef41e5361.jpg",
+        "id": 3
+      },
+      {
+        "title": "A Dance with Dragons",
+        "author": "George R. R. Martin",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/81WInI5d-TL.jpg",
+        "id": 4
+      },
+      {
+        "title": "Good Omens",
+        "author": "Neil Gaiman and Terry Pratchett",
+        "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+        "id": 5
+      },
+      {
+        "title": "Good Omens",
+        "author": "Neil Gaiman and Terry Pratchett",
+        "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+        "id": 6
+      },
+      {
+        "title": "Good Omens",
+        "author": "Neil Gaiman and Terry Pratchett",
+        "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+        "id": 7
+      },
+      {
+        "title": "Good Omens",
+        "author": "Neil Gaiman and Terry Pratchett",
+        "url": "https://target.scene7.com/is/image/Target/GUEST_2dc61df4-baf9-4ab6-b532-4be4ee25dce1?wid=488&hei=488&fmt=pjpeg",
+        "id": 8
+      }
     ]
+  }
 }
